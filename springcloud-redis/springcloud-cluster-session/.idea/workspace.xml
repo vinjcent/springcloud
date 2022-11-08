@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d7ec9cb-d1a7-4336-b6aa-784f841e1ef2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-distributed-lock/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-distributed-lock/redis-distributed-lock.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-distributed-lock/target/classes/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-distributed-lock/target/classes/com/vinjcent/RedisDistributedLockApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-distributed-lock/target/classes/com/vinjcent/config/redis/RedisConfiguration.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-distributed-lock/target/classes/com/vinjcent/service/Lock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-distributed-lock/target/classes/com/vinjcent/service/impl/SimpleRedisLock.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-distributed-lock/target/classes/com/vinjcent/utils/RedisUtils.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/redis-distributed-lock/target/test-classes/com/vinjcent/redisdistributedlock/RedisDistributedLockApplicationTests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/redis-distributed-lock/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/redis-distributed-lock/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\maven-Repository" />
+        <option name="mavenHome" value="D:\Environment\apache-maven-3.8.4" />
+        <option name="userSettingsFile" value="D:\Environment\apache-maven-3.8.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2HGV5Z1Ao2CSBqiuGdCabhXQllW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/redis-distributed-lock/src/main/java/com/vinjcent" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Gitee\springcloud\springcloud-redis\springcloud-cluster-session\redis-distributed-lock\src\main\java\com\vinjcent" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.vinjcent" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.vinjcent.config.redis" />
+      <recent name="com.vinjcent.redis" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.RedisDistributedLockApplication">
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisCacheApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="redis-cache" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.vinjcent.RedisCacheApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisDistributedLockApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="redis-distributed-lock" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.vinjcent.RedisDistributedLockApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RedisSessionManagerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="redis-session-manager" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.vinjcent.RedisSessionManagerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d7ec9cb-d1a7-4336-b6aa-784f841e1ef2" name="Default Changelist" comment="" />
+      <created>1667911225560</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667911225560</updated>
+      <workItem from="1667911227260" duration="208000" />
+      <workItem from="1667911473534" duration="5436000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
