@@ -15,10 +15,15 @@ public class ApplicationContextUtils implements ApplicationContextAware {
     // 将创建好的工厂已参数的形式传递给这个类
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        this.applicationContext = applicationContext;
+        ApplicationContextUtils.applicationContext = applicationContext;
     }
 
-    // 提供在工厂中获取对象的方法    RedisTemplate redisTemplate
+    // 泛型获取提供在工厂中获取对象的方法获取bean
+    public static <T> T getBean(String beanName, Class<T> clazz) {
+        return applicationContext.getBean(beanName, clazz);
+    }
+
+    // 提供在工厂中获取对象的方法,获取bean
     public static Object getBean(String beanName) {
         return applicationContext.getBean(beanName);
     }
