@@ -3,15 +3,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.vinjcent</groupId>
-    <artifactId>springcloud-cluster-session</artifactId>
+    <artifactId>redis</artifactId>
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
     <name>springcloud-cluster-session</name>
-    <description>Demo project for Spring Cloud Cluster Session</description>
+    <description>Demo project for Spring Cloud Redis</description>
 
     <modules>
         <module>redis-cache</module>
         <module>redis-session-manager</module>
+        <module>redis-global-filter</module>
     </modules>
 
 
