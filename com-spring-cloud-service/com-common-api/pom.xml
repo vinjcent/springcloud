@@ -9,10 +9,10 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>com-api-service</artifactId>
+    <artifactId>com-common-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>com-api-service</name>
-    <description>com-api-service</description>
+    <name>com-common-api</name>
+    <description>com-common-api</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -23,6 +23,14 @@
         <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
         <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
         <alibaba.thread.local.version>2.14.2</alibaba.thread.local.version>
+        <com.alibaba.druid>1.2.8</com.alibaba.druid>
+        <mysql.driven.version>8.0.19</mysql.driven.version>
+        <lombok.version>1.18.22</lombok.version>
+        <mybatis.plus.version>3.5.1</mybatis.plus.version>
+        <mybatis.plus.generator.version>3.5.2</mybatis.plus.generator.version>
+        <github.pagehelper.version>5.3.2</github.pagehelper.version>
+        <freemarker.version>2.3.29</freemarker.version>
+        <org.liquibase.core.version>4.20.0</org.liquibase.core.version>
     </properties>
 
     <dependencies>
@@ -32,7 +40,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <!--validation-->
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-validation -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
@@ -41,11 +48,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
-        <!--lombok-->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
         </dependency>
         <!--json-->
         <dependency>
@@ -69,6 +71,54 @@
             <groupId>com.alibaba</groupId>
             <artifactId>transmittable-thread-local</artifactId>
             <version>${alibaba.thread.local.version}</version>
+        </dependency>
+        <!--mybatis-plus-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis.plus.version}</version>
+        </dependency>
+        <!--pagehelper-->
+        <!-- https://mvnrepository.com/artifact/com.github.pagehelper/pagehelper -->
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper</artifactId>
+            <version>${github.pagehelper.version}</version>
+        </dependency>
+        <!--druid-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${com.alibaba.druid}</version>
+        </dependency>
+        <!--mysql驱动-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.driven.version}</version>
+        </dependency>
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <!--自动生成器-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-generator</artifactId>
+            <version>${mybatis.plus.generator.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.freemarker</groupId>
+            <artifactId>freemarker</artifactId>
+            <version>${freemarker.version}</version>
+        </dependency>
+        <!--liquibase-->
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+            <version>${org.liquibase.core.version}</version>
         </dependency>
 
     </dependencies>

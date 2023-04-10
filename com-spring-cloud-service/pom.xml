@@ -4,6 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.vinjcent</groupId>
     <artifactId>com-spring-cloud-service</artifactId>
+
     <!--父工程标识-->
     <packaging>pom</packaging>
     <version>0.0.1-SNAPSHOT</version>
@@ -11,7 +12,7 @@
     <description>com-spring-cloud-service</description>
 
     <modules>
-        <module>com-api-service</module>
+        <module>com-common-api</module>
         <module>com-order-service</module>
     </modules>
 

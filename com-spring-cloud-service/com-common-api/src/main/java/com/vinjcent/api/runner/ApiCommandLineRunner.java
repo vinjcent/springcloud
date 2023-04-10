@@ -34,13 +34,13 @@ public class ApiCommandLineRunner implements ApplicationRunner {
         }
         String port = env.getProperty("server.port");
         String servletPath = env.getProperty("spring.mvc.servlet.path");
-        log.info("\n----------------------------启动信息---------------------------------------\n\t"
+        log.info("\n----------------------------Start Information---------------------------------------\n\t"
                         + "Application '{}' is running! Access URLs:\n\t"
                         + "Local: \t\thttp://localhost:{}\n\t"
                         + "External: \thttp://{}:{}\n\t"
                         + "Swagger: \thttp://{}:{}/swagger-ui.html\n\t"
                         + "Doc: \t\thttp://{}:{}/doc.html\n"
-                        + "-----------------------------release list---------------------------------------\n\t"
+                        + "----------------------Start ended, program is running--------------------------------\n\t"
                 ,
                 env.getProperty("spring.application.name"),
                 env.getProperty("server.port") + servletPath,
