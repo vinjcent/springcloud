@@ -119,9 +119,9 @@ public class ResponseResult<T> implements Serializable {
      *
      * @param msg 响应消息
      */
-    public static <T> ResponseResult<T> success(String msg) {
-        return setAppHttpCodeEnum(AppHttpCodeEnum.SUCCESS, msg);
-    }
+    // public static <T> ResponseResult<T> success(String msg) {
+    //     return setAppHttpCodeEnum(AppHttpCodeEnum.SUCCESS, msg);
+    // }
 
     /**
      * 枚举封装

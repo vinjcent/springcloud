@@ -1,0 +1,30 @@
+CREATE TABLE `order`
+(
+    `id`                     BIGINT(20) NOT NULL COMMENT '主键',
+    `bill_no`                VARCHAR(32)    DEFAULT NULL COMMENT '单据编号',
+    `source_retail_order_id` BIGINT(20)     DEFAULT NULL COMMENT '零售订单编号',
+    `source_retail_order_no` VARCHAR(32)    DEFAULT NULL COMMENT '零售订单编号',
+    `member_name`            VARCHAR(20)    DEFAULT NULL COMMENT '客户昵称',
+    `attributed_by`          CHAR(4)        DEFAULT NULL COMMENT '责任归属code：字典5024',
+    `warehouse_id`           BIGINT(20)     DEFAULT NULL COMMENT '所属仓库-逻辑仓id',
+    `delivery_type_id`       BIGINT(20)     DEFAULT NULL COMMENT '物流公司-配送方式id',
+    `delivery_no`            VARCHAR(50)    DEFAULT NULL COMMENT '物流单号',
+    `payout_reason`          VARCHAR(255)   DEFAULT NULL COMMENT '赔付原因-code 字典库5025',
+    `payout_amount`          DECIMAL(22, 6) DEFAULT NULL COMMENT '赔付金额',
+    `is_intact`              TINYINT(2)     DEFAULT NULL COMMENT '包装是否完好:0:否；1:是',
+    `remark`                 VARCHAR(255)   DEFAULT NULL COMMENT '详细描述',
+    `color_tag`              CHAR(1)     DEFAULT 'N'     DEFAULT NULL COMMENT '颜色标记：R-红、O-橙、Y-黄、B-蓝、G-绿',
+    `bill_status`            CHAR(2)        DEFAULT NULL COMMENT '新增时默认=已登记，引用字典库6026',
+    `shop_id`                BIGINT(20)     DEFAULT NULL COMMENT '店铺id',
+    `create_time`            TIMESTAMP   NULL   DEFAULT NULL COMMENT '创建时间',
+    `create_by`              VARCHAR(20)    DEFAULT NULL COMMENT '创建人',
+    `modify_time`            TIMESTAMP   NULL   DEFAULT NULL COMMENT '修改时间',
+    `modify_by`              VARCHAR(20)    DEFAULT NULL COMMENT '修改人',
+    `abolish_time`           TIMESTAMP   NULL   DEFAULT NULL COMMENT '作废时间',
+    `abolish_by`             TIMESTAMP   NULL   DEFAULT NULL COMMENT '作废人',
+    `is_delete`              TINYINT(2)     DEFAULT '0' COMMENT '是否删除1：已删除；0：未删除',
+    PRIMARY KEY (`id`),
+    UNIQUE KEY `bill_no` (`bill_no`),
+    KEY `idx_create_time` (`create_time`)
+) ENGINE = INNODB
+  DEFAULT CHARSET = utf8mb4 COMMENT = '订单表';

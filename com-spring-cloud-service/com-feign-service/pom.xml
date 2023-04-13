@@ -9,40 +9,42 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>com-order-service</artifactId>
+    <artifactId>com-feign-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>com-order-service</name>
-    <description>com-order-service</description>
+    <name>com-feign-service</name>
+    <description>com-feign-service</description>
 
     <properties>
         <java.version>1.8</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>2.3.12.RELEASE</spring-boot.version>
-        <alibaba.fastjson.version>1.2.80</alibaba.fastjson.version>
-        <springfox-swagger2.version>2.9.2</springfox-swagger2.version>
-        <springfox-swagger-ui.version>2.9.2</springfox-swagger-ui.version>
-        <alibaba.thread.local.version>2.14.2</alibaba.thread.local.version>
     </properties>
 
     <dependencies>
-        
+
         <!--引入order-api模块-->
         <dependency>
             <groupId>com.vinjcent</groupId>
             <artifactId>com-order-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <!--引入mybatis模块-->
-        <dependency>
-            <groupId>com.vinjcent</groupId>
-            <artifactId>com-mybatis-service</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
         <!--web-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
     </dependencies>

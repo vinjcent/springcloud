@@ -1,0 +1,60 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <changeSet id="20230331-jiahui.wei-01" author="jiahui.wei">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="ticket_payout_bill"/>
+            </not>
+        </preConditions>
+        <comment>
+            赔付功能
+        </comment>
+        <sqlFile path="liquibase/release/1.0.1/ticket_payout_bill.sql" relativeToChangelogFile="false"></sqlFile>
+        <!--<sqlFile path="liquibase/release/1.0.1/ticket_payout_goods.sql" relativeToChangelogFile="false"></sqlFile>-->
+        <!--<sqlFile path="liquibase/release/1.0.1/ticket_payout_modify_log.sql" relativeToChangelogFile="false"></sqlFile>-->
+        <!--<sqlFile path="liquibase/release/1.0.1/ticket_payout_reply_log.sql" relativeToChangelogFile="false"></sqlFile>-->
+        <!--<sqlFile path="liquibase/release/1.0.1/ticket_payout_file.sql" relativeToChangelogFile="false"></sqlFile>-->
+    </changeSet>
+
+    <!--修改列类型-->
+    <!--<changeSet id="20230304-yubang.xu-11" author="yubang.xu">-->
+    <!--    <modifyDataType tableName="ticket_payout_goods" columnName="grouping_goods_qty" newDataType="decimal(22,2)"/>-->
+    <!--</changeSet>-->
+
+    <!--修改列名-->
+    <!--<changeSet id="20230305-yubang.xu-15" author="yubang.xu">-->
+    <!--    <preConditions onFail="MARK_RAN">-->
+    <!--        <not>-->
+    <!--            <columnExists tableName="ticket_payout_bill" columnName="source_retail_order_bill_id"/>-->
+    <!--        </not>-->
+    <!--    </preConditions>-->
+    <!--    <renameColumn tableName="ticket_payout_bill" oldColumnName="source_retail_order_id"-->
+    <!--                  newColumnName="source_retail_order_bill_id" remarks="零售订单ID" columnDataType="bigint(20)"/>-->
+    <!--    <renameColumn tableName="ticket_payout_bill" oldColumnName="source_retail_order_no"-->
+    <!--                  newColumnName="source_retail_order_bill_no" remarks="零售订单编码" columnDataType="varchar(32)"/>-->
+    <!--</changeSet>-->
+
+    <!--删除列-->
+    <!--<changeSet id="20230306-yubang.xu-16" author="yubang.xu">-->
+    <!--    <preConditions onFail="MARK_RAN">-->
+    <!--        <columnExists tableName="ticket_payout_bill" columnName="source_retail_order_bill_id"/>-->
+    <!--    </preConditions>-->
+    <!--    <dropColumn tableName="ticket_payout_bill" columnName="amount"/>-->
+    <!--</changeSet>-->
+
+    <!--增加列-->
+    <!--<changeSet id="20230308-yubang.xu-17" author="yubang.xu">-->
+    <!--    <preConditions onFail="MARK_RAN">-->
+    <!--        <not>-->
+    <!--            <columnExists tableName="ticket_refund_bill" columnName="delivery_type_id"/>-->
+    <!--        </not>-->
+    <!--    </preConditions>-->
+    <!--    <addColumn tableName="ticket_refund_bill">-->
+    <!--        <column remarks="物流公司-配送方式id" afterColumn="delivery_type" name="delivery_type_id"-->
+    <!--                type="bigint(20)"/>-->
+    <!--    </addColumn>-->
+    <!--</changeSet>-->
+
+</databaseChangeLog>

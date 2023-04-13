@@ -1,0 +1,57 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+    <!--  库存表字段及索引 -->
+    <changeSet id="20230331-jiahui.wei-01" author="jiahui.wei">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="stock"/>
+            </not>
+        </preConditions>
+        <createTable tableName="stock" remarks="库存表">
+            <column name="id" type="bigint(20)" remarks="单据ID">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="bill_no" type="varchar(32)" remarks="单据编号">
+                <constraints nullable="false" unique="true"/>
+            </column>
+            <column name="bill_status" type="char(2)" remarks="单据状态: 字典2025"/>
+            <column name="bill_name" type="char(2)" remarks="工单类型：字典2024"/>
+            <column name="shop_id" type="bigint(20)" remarks="商店"/>
+            <column name="platform_trade_bill_no" type="varchar(50)" remarks="交易号"/>
+            <column name="source_retail_order_bill_no" type="varchar(50)" remarks="订单号"/>
+            <column name="source_retail_order_bill_id" type="bigint(20)" remarks="订单id"/>
+            <column name="warehouse_id" type="bigint(20)" remarks="逻辑仓id"/>
+            <column name="member_name" type="varchar(50)" remarks="客户昵称"/>
+            <column name="delivery_type_id" type="bigint(20)" remarks="物流公司-配送方式id"/>
+            <column name="delivery_no" type="varchar(100)" remarks="物流单号"/>
+            <column name="issues_type" type="char(2)" remarks="问题类型：字典2026"/>
+            <column name="customer_requirements" type="char(2)" remarks="客户需求：字典2027"/>
+            <column name="check_results" type="char(1)" remarks="颜色标记：R-红、O-橙、Y-黄、B-蓝、G-绿" defaultValue="N"/>
+            <column name="remark" type="varchar(256)" remarks="详情描述"/>
+            <column name="limit_date" type="timestamp" remarks="处理时限"/>
+            <column name="limit_status" type="tinyint" remarks="时限状态：0-未超时，1-超时"/>
+            <column name="all_reissue_flag" type="tinyint" remarks="整单补发：0-否，1-是" defaultValue="0"/>
+            <column name="amount" type="decimal(22,6) " remarks="金额" defaultValueNumeric="0"/>
+            <column name="verify_result" type="char(2)" remarks="核实结果：字典库2028名称"/>
+            <column name="create_time" type="timestamp" remarks="创建时间"/>
+            <column name="create_by" type="varchar(32)" remarks="创建人"/>
+            <column name="modify_time" type="timestamp" remarks="修改时间"/>
+            <column name="modify_by" type="varchar(32)" remarks="修改人"/>
+            <column name="abolish_time" type="timestamp" remarks="作废时间"/>
+            <column name="abolish_by" type="varchar(32)" remarks="作废人"/>
+            <column name="complete_ord_retail_order_bill_no" type="varchar(50)" remarks="补发订单号"/>
+            <column name="is_delete" type="tinyint" remarks="是否删除：0-否，1-是" defaultValue="0"/>
+            <column name="is_inside" type="tinyint" remarks="是否内部：0-否，1-是" defaultValue="1"/>
+        </createTable>
+        <createIndex indexName="idx_create_time" tableName="stock">
+            <column name="create_time"/>
+        </createIndex>
+        <createIndex indexName="idx_is_delete" tableName="stock">
+            <column name="is_delete"/>
+        </createIndex>
+    </changeSet>
+
+
+</databaseChangeLog>

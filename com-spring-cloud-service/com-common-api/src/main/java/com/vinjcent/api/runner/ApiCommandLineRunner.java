@@ -33,7 +33,7 @@ public class ApiCommandLineRunner implements ApplicationRunner {
             log.error(e.getMessage(), e);
         }
         String port = env.getProperty("server.port");
-        String servletPath = env.getProperty("spring.mvc.servlet.path");
+        String servletPath = env.getProperty("server.servlet.context-path");
         log.info("\n----------------------------Start Information---------------------------------------\n\t"
                         + "Application '{}' is running! Access URLs:\n\t"
                         + "Local: \t\thttp://localhost:{}\n\t"
