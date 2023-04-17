@@ -1,8 +1,6 @@
 # 端口号
 server:
   port: 8080
-  servlet:
-    context-path: /feign
 spring:
   application:
     # 应用名称
@@ -19,7 +17,9 @@ spring:
         username: nacos
         password: nacos
         # 不向注册中心注册自己
-      #        register-enabled: false
+        # register-enabled: false
+        # 是否是临时节点
+        # ephemeral: true
       config:
         # 配置扩展文件类型,默认使用properties
         file-extension: yaml

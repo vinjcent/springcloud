@@ -5,6 +5,7 @@ import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Component;
+import org.springframework.util.StringUtils;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
@@ -34,6 +35,9 @@ public class ApiCommandLineRunner implements ApplicationRunner {
         }
         String port = env.getProperty("server.port");
         String servletPath = env.getProperty("server.servlet.context-path");
+        if (StringUtils.isEmpty(servletPath)) {
+            servletPath = "";
+        }
         log.info("\n----------------------------Start Information---------------------------------------\n\t"
                         + "Application '{}' is running! Access URLs:\n\t"
                         + "Local: \t\thttp://localhost:{}\n\t"

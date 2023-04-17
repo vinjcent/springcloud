@@ -26,7 +26,7 @@
     </properties>
 
     <dependencies>
-        
+
         <!--引入order-api模块-->
         <dependency>
             <groupId>com.vinjcent</groupId>

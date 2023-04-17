@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(OrderApiController.REQUEST_MAPPING)
 public class OrderApiController {
 
-    public static final String REQUEST_MAPPING = "/order/api";
+    public static final String REQUEST_MAPPING = "/api/order";
 
     private final IOrderEndpoint orderEndpoint;
 

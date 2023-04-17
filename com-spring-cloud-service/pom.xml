@@ -13,10 +13,11 @@
 
     <modules>
         <module>com-common-api</module>
-        <module>com-mybatis-service</module>
         <module>com-order-api</module>
-        <module>com-order-service</module>
+        <module>com-mybatis-service</module>
         <module>com-feign-service</module>
+        <module>com-order-service</module>
+        <module>com-gateway-service</module>
     </modules>
 
     <properties>
