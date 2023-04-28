@@ -18,6 +18,7 @@
         <module>com-feign-service</module>
         <module>com-order-service</module>
         <module>com-gateway-service</module>
+        <module>com-sentinel-service</module>
     </modules>
 
     <properties>
